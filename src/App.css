@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
     .jokesCard{
         margin: 1em;
