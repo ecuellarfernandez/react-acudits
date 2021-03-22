@@ -1,26 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './App.css'
+import Wheater from "./components/Weather";
+import fetchData from "./helpers/fetchData";
 
 function App() {
 
   const url = 'https://icanhazdadjoke.com/';
-  const [joke, setJoke] = useState('')
+  const [joke, setJoke] = useState(null);
 
-  const getData = async ()=> {
-    try{
-      const res = await fetch(url, {headers:{'Accept': 'application/json'}});
-      const data = await res.json();
-      setJoke(data.joke)
-    }catch(e){
-      console.error(e)
-    }
+  useEffect(()=>{
+    getData();
+  },[])
+  
+  const getData = async ()=>{
+    const data = await fetchData(url);
+    setJoke(data.joke);
   }
+  
+  const jokeRender = joke ? joke : 'fetching...';
 
   return (
     <div className='appContainer'>
+      <Wheater />
       <div className="jokesCard">
         <h1>Jokes</h1>
-        <p>{joke}</p>
+        <p>{jokeRender}</p>
         <button onClick={getData}>Next Joke</button>
       </div>
     </div>
