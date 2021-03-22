@@ -1,0 +1,18 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    /* 24px base */
+    font-size: 150%;
+}
+
+button{
+    /* 20px */
+    font-size: 1em;
+    /* 10px 15px */
+    padding: 2% 5%;
+    cursor: pointer;
+    border: none;
+}

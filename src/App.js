@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './App.css'
 
 function App() {
 
@@ -16,10 +17,12 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Jokes</h1>
-      <p>{joke}</p>
-      <button onClick={getData}>Next Joke</button>
+    <div className='appContainer'>
+      <div className="jokesCard">
+        <h1>Jokes</h1>
+        <p>{joke}</p>
+        <button onClick={getData}>Next Joke</button>
+      </div>
     </div>
   );
 }
