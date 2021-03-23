@@ -22,5 +22,5 @@ Sprint 8. React acudits
 * Modificar la navegación para mostrar al usuario una pantalla de bienvenida. Crear un nuevo componente Welcome y hacer que se muestre por defecto. Este componente tendrá un botón para acceder, que al ser presionado acceda a la pantalla de chistes.
 * La pantalla de bienvenida y principal se deben de mostrar/ocultar haciendo uso del renderizado condicional.
 
-## Ejercicio 5 
+## Ejercicio 5 ✅
 * modificar el ejercicio anterior para usar rutas en vez del renderizado condicional definir rutas de la aplicación para hacer uso de estas en el botón de acceder.
