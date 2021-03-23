@@ -1,34 +1,32 @@
-import React, { useEffect, useState } from "react";
-import './App.css'
+import React, { useState, Fragment } from "react";
+import './static/css/App.css'
 import Wheater from "./components/Weather";
-import fetchData from "./helpers/fetchData";
+import Jokes from "./components/Jokes";
 
 function App() {
 
-  const url = 'https://icanhazdadjoke.com/';
-  const [joke, setJoke] = useState(null);
+  const [welcome, setWelcome] = useState(true);
 
-  useEffect(()=>{
-    getData();
-  },[])
-  
-  const getData = async ()=>{
-    const data = await fetchData(url);
-    setJoke(data.joke);
+  const handleWelcome = ()=>{
+    setWelcome(prev=>!prev);
   }
-  
-  const jokeRender = joke ? joke : 'fetching...';
+
+  const condition = welcome ?
+    <div className="welcome">
+        <h1>Welcome</h1>
+        <button onClick={handleWelcome}>Enter jokes page &#10142;</button>
+    </div> :
+    <Fragment>
+        <Wheater />
+        <Jokes />
+        <button onClick={handleWelcome}>&#129044;</button>
+    </Fragment>;
 
   return (
     <div className='appContainer'>
-      <Wheater />
-      <div className="jokesCard">
-        <h1>Jokes</h1>
-        <p>{jokeRender}</p>
-        <button onClick={getData}>Next Joke</button>
-      </div>
+      {condition}
     </div>
-  );
+  )
 }
 
 export default App;

@@ -18,7 +18,7 @@ Sprint 8. React acudits
 ## Ejercicio 3 ✅
 * Consumir una API de inormación meteorológica y mostrarlo en la web.
 
-## Ejercicio 4 
+## Ejercicio 4 ✅
 * Modificar la navegación para mostrar al usuario una pantalla de bienvenida. Crear un nuevo componente Welcome y hacer que se muestre por defecto. Este componente tendrá un botón para acceder, que al ser presionado acceda a la pantalla de chistes.
 * La pantalla de bienvenida y principal se deben de mostrar/ocultar haciendo uso del renderizado condicional.
 

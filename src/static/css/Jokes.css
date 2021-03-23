@@ -1,0 +1,11 @@
+.jokesCard{
+    margin: 1em;
+    display: grid;
+    place-items: center;
+    padding: 2% 5%;
+    /* border 3px */
+    border: 0.125em solid black;
+    min-height: 20.833em;
+    height: auto;
+    width: min(35.417em, 90%);
+}

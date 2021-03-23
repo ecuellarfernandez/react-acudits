@@ -1,0 +1,12 @@
+.appContainer{
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.welcome > *{
+    margin: 0.417em;
+}
