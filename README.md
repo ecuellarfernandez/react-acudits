@@ -2,6 +2,7 @@
 Sprint 8. React acudits
 
 DEMO: https://react-acudits.netlify.app/  
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5658becf-6499-444d-bb55-5df095a1a315/deploy-status)](https://app.netlify.com/sites/react-acudits/deploys)
 
 ## Nivel 1 ⭐
