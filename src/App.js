@@ -1,31 +1,29 @@
-import React, { useState, Fragment } from "react";
-import './static/css/App.css'
-import Wheater from "./components/Weather";
+import React from "react";
+import './static/css/App.css';
+import Weather from "./components/Weather";
 import Jokes from "./components/Jokes";
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import Welcome from "./components/Welcome";
 
 function App() {
 
-  const [welcome, setWelcome] = useState(true);
-
-  const handleWelcome = ()=>{
-    setWelcome(prev=>!prev);
-  }
-
-  const condition = welcome ?
-    <div className="welcome">
-        <h1>Welcome</h1>
-        <button onClick={handleWelcome}>Enter jokes page &#10142;</button>
-    </div> :
-    <Fragment>
-        <Wheater />
-        <Jokes />
-        <button onClick={handleWelcome}>&#129044;</button>
-    </Fragment>;
-
   return (
-    <div className='appContainer'>
-      {condition}
-    </div>
+    <Router>
+
+      <div className='appContainer'>
+        <Switch>
+          <Route path='/principal'>
+            <Weather />
+            <Jokes />
+            <Link to='/'>&#129044; Welcome</Link>
+          </Route>
+          <Route path='/'>
+            <Welcome />
+          </Route>
+        </Switch>
+      </div>
+
+    </Router>
   )
 }
 
