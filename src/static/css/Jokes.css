@@ -8,4 +8,5 @@
     min-height: 20.833em;
     height: auto;
     width: min(35.417em, 90%);
+    background-color: white;
 }

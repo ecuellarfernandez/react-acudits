@@ -6,6 +6,7 @@
 body{
     /* 24px base */
     font-size: 150%;
+    background-color: aliceblue;
 }
 
 button{
